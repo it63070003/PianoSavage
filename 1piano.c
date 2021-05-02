@@ -121,6 +121,7 @@ int playMode(){
             }
         }
         printf("Song Ended♪♫\n");
+        printf("Press '=' Go to Menu\t'-' Go to Exit\n");
     }
      
 }
