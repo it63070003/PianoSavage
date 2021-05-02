@@ -1,10 +1,128 @@
 #include <stdio.h>
 #include <windows.h>
 #include <string.h>
+#include <ctype.h>
+
+//Help Mode()
+int helpMode(){
+    char c[2];
+    printf(
+"██╗  ██╗███████╗██╗     ██████╗ \n"
+"██║  ██║██╔════╝██║     ██╔══██╗\n"
+"███████║█████╗  ██║     ██████╔╝\n"
+"██╔══██║██╔══╝  ██║     ██╔═══╝ \n"
+"██║  ██║███████╗███████╗██║     \n"
+"╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     \n"
+);
+    //เติม
+    scanf("%s", &c);
+    if(c[0] == '='){
+        return 0;
+    }
+    else if(c[0] == '-'){
+        return 1;
+    }
+
+}
 
 //Play Mode
 int playMode(){
+    char music[100000];
+    int stop=0;
+    int sharp=0;
+    int state=0;
+    int note=0;
+    int time=0;
+    int octave=0;
+    char ram[50];
+    char ram2[2];
+    //เติม
+    float freq[12][3] = {{130.8,261.6,523.3},{138.6,277.2,554.4}};
+    strcpy(ram,"");
+    strcpy(ram2,"");
+    while(TRUE){
+        scanf(" %[^\n]s",&music);
+        for(int i=0;i<strlen(music)+1;i++){
+            if(music[i] == '\0'){
+                stop = 1;
+            }
+            if(music[i] == ' ' || music[i] == '\0'){
+                //Sharp
+                if(state != 1 && strlen(ram)>2){
+                    sharp = 1;
+                }
+                else if(state != 1){
+                    sharp = 0;
+                }
+                if(state == 0){
+                    //note
+                    if(ram[0] == 'C'){
+                        note = 0;
+                    }
+                    else if(ram[0] == 'C' && sharp){
+                        note = 1;
+                    }
+                    else if(ram[0] == 'D'){
+                        note = 2;
+                    }
+                    else if(ram[0] == 'D' && sharp){
+                        note = 3;
+                    }
+                    else if(ram[0] == 'E'){
+                        note = 4;
+                    }
+                    else if(ram[0] == 'F'){
+                        note = 5;
+                    }
+                    else if(ram[0] == 'F' && sharp){
+                        note = 6;
+                    }
+                    else if(ram[0] == 'G'){
+                        note = 7;
+                    }
+                    else if(ram[0] == 'G' && sharp){
+                        note = 8;
+                    }
+                    else if(ram[0] == 'A'){
+                        note = 9;
+                    }
+                    else if(ram[0] == 'A' && sharp){
+                        note = 10;
+                    }
+                    else if(ram[0] == 'B'){
+                        note = 11;
+                    }
+                    else if(ram[0] == '-'){
+                        return 1;
+                    }
+                    else if(ram[0] == '='){
+                        return 0;
+                    }
+                    //octave
+                    ram2[0] = ram[strlen(ram)-1];
+                    ram2[1] = '\0';
+                    octave = atoi(ram2)-3;
 
+                    strcpy(ram2,"");
+                    state = abs(state-1);
+                }
+                else if(state == 1){
+                    time = atoi(ram);
+                    Beep(freq[note][octave],time);
+                    state = abs(state-1);
+                }
+                strcpy(ram,"");
+            }
+            else{
+                ram2[0] = music[i];
+                ram2[1] = '\0';
+                strcat(ram,ram2);
+                strcpy(ram2,"");
+            }
+        }
+        printf("Song Ended♪♫\n");
+    }
+     
 }
 
 //Chord Mode
@@ -298,10 +416,22 @@ int main()
     int end = 0;
     int mode = 0;
     while(end != 1){
-        printf("Mode\n"
+        printf(
+" ██▓███   ██▓ ▄▄▄       ███▄    █  ▒█████       ██████  ▄▄▄    ██▒   █▓ ▄▄▄        ▄████ ▓█████ \n"
+"▓██░  ██▒▓██▒▒████▄     ██ ▀█   █ ▒██▒  ██▒   ▒██    ▒ ▒████▄ ▓██░   █▒▒████▄     ██▒ ▀█▒▓█   ▀ \n"
+"▓██░ ██▓▒▒██▒▒██  ▀█▄  ▓██  ▀█ ██▒▒██░  ██▒   ░ ▓██▄   ▒██  ▀█▄▓██  █▒░▒██  ▀█▄  ▒██░▄▄▄░▒███   \n"
+"▒██▄█▓▒ ▒░██░░██▄▄▄▄██ ▓██▒  ▐▌██▒▒██   ██░     ▒   ██▒░██▄▄▄▄██▒██ █░░░██▄▄▄▄██ ░▓█  ██▓▒▓█  ▄ \n"
+"▒██▒ ░  ░░██░ ▓█   ▓██▒▒██░   ▓██░░ ████▓▒░   ▒██████▒▒ ▓█   ▓██▒▒▀█░   ▓█   ▓██▒░▒▓███▀▒░▒████▒\n"
+"▒▓▒░ ░  ░░▓   ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░ ▒░▒░▒░    ▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░░ ▐░   ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░\n"
+"░▒ ░      ▒ ░  ▒   ▒▒ ░░ ░░   ░ ▒░  ░ ▒ ▒░    ░ ░▒  ░ ░  ▒   ▒▒ ░░ ░░    ▒   ▒▒ ░  ░   ░  ░ ░  ░\n"
+"░░        ▒ ░  ░   ▒      ░   ░ ░ ░ ░ ░ ▒     ░  ░  ░    ░   ▒     ░░    ░   ▒   ░ ░   ░    ░   \n"
+"          ░        ░  ░         ░     ░ ░           ░        ░  ░   ░        ░  ░      ░    ░  ░\n"
+"                                                                   ░                            \n");
+        printf("Select Mode\n"
                "1.Play Mode\n"
                "2.Chords Mode\n"
                "3.Exit\n"
+               "4.Help\n"
                "Type in number to choose mode\n"
                "Choose Mode:");
         scanf("%i",&mode);
@@ -313,6 +443,9 @@ int main()
         }
         else if(mode == 3){
             end = 1;
+        }
+        else if(mode == 4){
+            end = helpMode();
         }
     }
     
