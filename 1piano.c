@@ -431,8 +431,8 @@ int main()
         printf("Select Mode\n"
                "1.Play Mode\n"
                "2.Chords Mode\n"
-               "3.Exit\n"
-               "4.Help\n"
+               "3.Help\n"
+               "4.Exit\n"
                "Type in number to choose mode\n"
                "Choose Mode:");
         scanf("%i",&mode);
@@ -443,10 +443,10 @@ int main()
             end = chordMode();
         }
         else if(mode == 3){
-            end = 1;
+            end = helpMode();
         }
         else if(mode == 4){
-            end = helpMode();
+            end = 1;
         }
     }
     
