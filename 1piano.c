@@ -14,7 +14,19 @@ int helpMode(){
 "██║  ██║███████╗███████╗██║     \n"
 "╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     \n"
 );
-    //เติม
+    printf("1.Play Mode\n"
+           "Type in Note+Octave Time\n"
+           "Ex.C#3 500  (note C#, octave 3, time 500ms)\n"
+           "Note: C C# D D# E F F# G G# A A# B\n"
+           "Octave: 3 4 5\n"
+           "Time: >= 0 (millisecond)\n"
+           "\n\n2.Chords Mode\n"
+           "Type in Chords\n"
+           "Ex.C#m (C sharp minor)\n"
+           "   Bb  (B flat major)\n"
+           "Chords:C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B\n"
+           "Minors:m (add m to the last letter)\n"
+           "\n\nPress '=' Go to Menu\t'-' Go to Exit\n");
     scanf("%s", &c);
     if(c[0] == '='){
         return 0;
@@ -27,6 +39,12 @@ int helpMode(){
 
 //Play Mode
 int playMode(){
+    printf("██████╗ ██╗      █████╗ ██╗   ██╗\n"
+           "██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝\n"
+           "██████╔╝██║     ███████║ ╚████╔╝ \n"
+           "██╔═══╝ ██║     ██╔══██║  ╚██╔╝  \n"
+           "██║     ███████╗██║  ██║   ██║   \n"
+           "╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   \n");
     char music[100000];
     int stop=0;
     int sharp=0;
@@ -36,11 +54,11 @@ int playMode(){
     int octave=0;
     char ram[50];
     char ram2[2];
-    //เติม
     float freq[12][3] = {{130.8,261.6,523.3},{138.6,277.2,554.4},{146.8,293.7,587.3},{155.6,311.1,622.3},{164.8,329.6,659.3},{174.6,349.2,698.5},{185.0,370.0,740.0},{196.0,392.0,784.0},{207.7,415.3,830.6},{220.0,440.0,880.0},{233.1,466.2,932.3},{246.9,493.9,987.8}};
     strcpy(ram,"");
     strcpy(ram2,"");
     while(TRUE){
+        printf("Enter Note:");
         scanf(" %[^\n]s",&music);
         for(int i=0;i<strlen(music)+1;i++){
             if(music[i] == '\0'){
@@ -131,6 +149,12 @@ int chordMode(){
     char chord[4];
     while (TRUE)
     {   
+        printf(" ██████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗\n"
+               "██╔════╝██║  ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝\n"
+               "██║     ███████║██║   ██║██████╔╝██║  ██║███████╗\n"
+               "██║     ██╔══██║██║   ██║██╔══██╗██║  ██║╚════██║\n"
+               "╚██████╗██║  ██║╚██████╔╝██║  ██║██████╔╝███████║\n"
+               "╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝ \n");
         printf("Press '=' Go to Menu\t'-' Go to Exit\n");
         printf("Chord:");
         scanf("%s",&chord);
