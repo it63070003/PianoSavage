@@ -6,13 +6,13 @@
 https://it63070003.github.io/PianoSavage/
 
 ## สร้างขึ้นด้วย:
-* ภาษาซี\
-* cygwin\
+* ภาษาซี
+* cygwin
 * github
 
 ## ความต้องการของโปรแกรม:
-* ระบบปฏิบัตการคอมพิวเตอร์ window\
-* computer\
+* ระบบปฏิบัตการคอมพิวเตอร์ window
+* computer
 * cygwin
 
 
