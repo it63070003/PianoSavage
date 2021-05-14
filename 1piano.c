@@ -74,40 +74,40 @@ int playMode(){
                 }
                 if(state == 0){
                     //note
-                    if(ram[0] == 'C'){
+                    if(ram[0] == 'C' && !sharp){
                         note = 0;
                     }
                     else if(ram[0] == 'C' && sharp){
                         note = 1;
                     }
-                    else if(ram[0] == 'D'){
+                    else if(ram[0] == 'D' && !sharp){
                         note = 2;
                     }
                     else if(ram[0] == 'D' && sharp){
                         note = 3;
                     }
-                    else if(ram[0] == 'E'){
+                    else if(ram[0] == 'E' && !sharp){
                         note = 4;
                     }
-                    else if(ram[0] == 'F'){
+                    else if(ram[0] == 'F' && !sharp){
                         note = 5;
                     }
                     else if(ram[0] == 'F' && sharp){
                         note = 6;
                     }
-                    else if(ram[0] == 'G'){
+                    else if(ram[0] == 'G' && !sharp){
                         note = 7;
                     }
                     else if(ram[0] == 'G' && sharp){
                         note = 8;
                     }
-                    else if(ram[0] == 'A'){
+                    else if(ram[0] == 'A' && !sharp){
                         note = 9;
                     }
                     else if(ram[0] == 'A' && sharp){
                         note = 10;
                     }
-                    else if(ram[0] == 'B'){
+                    else if(ram[0] == 'B' && !sharp){
                         note = 11;
                     }
                     else if(ram[0] == '-'){
