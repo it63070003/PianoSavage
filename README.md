@@ -8,12 +8,12 @@ https://it63070003.github.io/PianoSavage/
 ## สร้างขึ้นด้วย:
 ภาษาซี\
 cygwin\
-github\
+github
 
 ## ความต้องการของโปรแกรม:
 ระบบปฏิบัตการคอมพิวเตอร์ window\
 computer\
-cygwin\
+cygwin
 
 
 ### ผู้จัดทำ
