@@ -1,0 +1,209 @@
+<html>
+<head>
+	<title></title>
+  <style>
+    body{
+      background:black;
+      margin:1em;
+      font-family:sans-serif;
+    }
+    mode{
+      color:yellow;
+      font-size:1.2em;
+	}
+    h1{
+		color:white;
+    }
+    p1{
+		color:white;
+    }
+    #border{
+    	background:black;
+      background-repeat:no-repeat;
+      border:3px solid white;
+      padding:10px;
+}
+    #headborder{
+      border-bottom:1px solid white;
+      margin-top:-20px;
+      padding-top:1px;
+      margin-bottom:30px;
+}
+    #head{
+   		transform-origin:center;
+      font-size:50px;
+      color:green;
+      margin-left:0;
+      animation-name: head;
+  		animation-duration: 4s;
+      animation-iteration-count:1;
+      
+    }
+    @keyframes head {
+  from {transform:translateX(100%);}
+  to {transform:translateX(0%);}
+}
+    a{
+    	color:green;
+      transition: 0.5s;
+    }
+    a:hover{
+    	color:red;
+      text-shadow:0 0 20px white;
+    }
+    #image{
+    	position:relative;
+      display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 35%;
+      height:auto;
+    }
+    #web{
+		cursor:pointer;
+    }
+    .ghost{
+    	animation:fade 3s infinite alternate;
+    }
+    .ghost:hover{
+    	transform:scale(4,4);
+  		margin-left:40%;
+      margin-top:40%;
+      z-index:1;
+      opacity:1;
+      animation:show 2s forwards;
+      
+    }
+    #ghost1{
+    	position:absolute;
+      width:20%;
+      left:5%;
+      top:3%px;
+    	
+    }
+    #ghost2{
+    	position:absolute;
+      left:80%;
+      top:150%;
+      opacity:3;
+      cursor:pointer;
+      
+    }
+    #ghost22{
+    	position:absolute;
+      width:100%;
+      height:100%;
+    }
+    #ghost3{
+    	position:absolute;
+    }
+    #ghost4{
+    	position:absolute;
+    }
+    @keyframes fade{
+      from{opacity:0;}
+      to{opacity:0.1;}
+    }
+    @keyframes show{
+      0%{opacity:1;}
+      30%{opacity:1;}
+      100%{opacity:0;}
+    }
+  </style>
+</head>
+<body id="border">
+  <div>
+    <div id="headborder">
+      <h1 id="head">Piano Savage</h1>
+    </div>
+    <img class="ghost" id="ghost1" src="https://pngimg.com/uploads/ghost/ghost_PNG31.png">
+    <img id="image" src="https://media.discordapp.net/attachments/836174851625975819/842763507279593493/Poster.png?width=395&height=559">
+    <br>
+  <p1>&nbsp;&nbsp;&nbsp;&nbsp;แอพพลิเคชั่นที่เล่นเสียงเพลงตามตัวโน๊ต มอบความเพลิดเพลิน และความรู้ ใช้ได้ทุกเพศทุยวัย มี 2 โหมด คือ Play Mode และ Chords Mode</p1>
+  <br>
+    <br>
+  <mode>Play Mode:</mode>
+  <br>
+  <p1>$ โหมดสำหรับเล่นเสียงเพลงโดยการป้อนโน้ตเข้าไปมีถึง 36 เสียง</p1>
+  </div>
+  <br>
+  <mode>Chords Mode:</mode>
+  <br>
+  <p1>$ โหมดสำหรับดูคอร์ดเพื่อเรียนรู้ฝึกฝนมี 24 คอร์ด</p1>
+  <br>
+  <br>
+  <mode>สร้างขึ้นด้วย:</mode>
+  <br>
+  <p1>$ ภาษาซี</p1>
+  <br>
+  <p1>$ cygwin</p1>
+  <br>
+  <p1>$ github</p1>
+  <br>
+  <br>
+  <mode>ความต้องการของโปรแกรม:</mode>
+  <br>
+  <p1>$ ระบบปฏิบัตการคอมพิวเตอร์ window</p1>
+  <br>
+  <p1>$ computer</p1>
+  <br>
+  <p1>$ cygwin</p1>
+  <br>
+  <br>
+  <mode>วิธีใช้งาน:</mode>
+  <br>
+  <p1>หน้า UI จะมีให้เลือก 4 อย่างคือ ChordMode, PlayMode, Help และ Exit</p1>
+  <br>
+  <img src="https://media.discordapp.net/attachments/836174851625975819/842751562065117184/UI.png" />
+  <br>
+  <br>
+  <p1>1.Play Mode:
+    <br>
+    <img src="https://media.discordapp.net/attachments/836174851625975819/842724438474489897/Play.png">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;เมื่อขึ้นข้อความ "Enter Note:" ให้ป้อน Note+Octave ตามด้วยเวลา เช่น "C3 1000" หมายความว่าจะเล่นโน้ตตัวโด octaveที่ 3 เป็นเวลา 1000 ms ในแอพนี้มี Octave:3,4,5 และมี Note: C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B</p1>
+  <br>
+  <br>
+  <p1>2.Chords Mode:
+    <br>
+  <img src="https://media.discordapp.net/attachments/836174851625975819/842726546468634634/Chord.png">
+  <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;โหมดนี้จะเป็นการป้อนคอร์ดเพื่อหาดูคอร์ดเปียโนมี 24 คอร์ด มี major และ minor เช่น "C#m"</p1>
+  <br>
+  <br>
+  <p1>3.Help:</p1>
+  <br>
+  <img src="https://media.discordapp.net/attachments/836174851625975819/842753470804656179/Help.png">
+  <br>
+  <p1>&nbsp;&nbsp;&nbsp;&nbsp;หน้านี้จะช่วยสอนวิธีการใช้งาน</p1>
+  <br>
+  <br>
+  <p1>4.Exit:</p1>
+  <br>
+  <p1>&nbsp;&nbsp;&nbsp;&nbsp;ออกจากโปรแกรม</p1>
+  <br>
+  <br>
+  <mode>จัดทำโดย:</mode>
+  <br>
+  <p1>1.นายกรรษฎา มงคลจาตุรงค์ 63070003</p1>
+  <br>
+  <p1>2.นายเจษฎากร หนูอิ่ม 63070024</p1>
+  <br>
+  <p1>3.นายนริศ พงษ์พิทักษ์ 63070093</p1>
+  <br>
+  <p1>4.นายเมษา มานิตสกุลวงศ์ 63070139</p1>
+  <br>
+  <br>
+  <Mode>Source Code:</Mode>
+  <a href="https://github.com/it63070003/PianoSavage">https://github.com/it63070003/PianoSavage</a>
+  <p1 id="ghost2" onclick="show()">Don't Click</p1>
+</body>
+  <script>
+    function show(){
+      document.getElementById("border").style.background = "url('https://64.media.tumblr.com/731543a34d945beefab773f4ccd1e415/tumblr_mlkkntfmBU1rwuvuco1_500.gifv')";
+      document.getElementById("ghost2").innerHTML = "Don't look at the back, He's here";
+      document.getElementById("ghost2").style.color = "crimson";
+    }
+  </script>
+ </html>
+</html>
