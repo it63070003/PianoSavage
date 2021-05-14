@@ -15,23 +15,24 @@ https://it63070003.github.io/PianoSavage/
 * computer
 * cygwin
 
-วิธีใช้งาน:
+## วิธีใช้งาน:
+![play mode picture](https://media.discordapp.net/attachments/836174851625975819/842751562065117184/UI.png)\
 หน้า UI จะมีให้เลือก 4 อย่างคือ ChordMode, PlayMode, Help และ Exit
 
 
-1.Play Mode:
+1.Play Mode:\
+![play mode picture](https://media.discordapp.net/attachments/836174851625975819/842724438474489897/Play.png)\
+เมื่อขึ้นข้อความ "Enter Note:" ให้ป้อน Note+Octave ตามด้วยเวลา เช่น "C3 1000" หมายความว่าจะเล่นโน้ตตัวโด octaveที่ 3 เป็นเวลา 1000 ms ในแอพนี้มี Octave:3,4,5 และมี Note: C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B
 
-    เมื่อขึ้นข้อความ "Enter Note:" ให้ป้อน Note+Octave ตามด้วยเวลา เช่น "C3 1000" หมายความว่าจะเล่นโน้ตตัวโด octaveที่ 3 เป็นเวลา 1000 ms ในแอพนี้มี Octave:3,4,5 และมี Note: C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B
-
-2.Chords Mode:
-
+2.Chords Mode:\
+![play mode picture](https://media.discordapp.net/attachments/836174851625975819/842726546468634634/Chord.png)\
     โหมดนี้จะเป็นการป้อนคอร์ดเพื่อหาดูคอร์ดเปียโนมี 24 คอร์ด มี major และ minor เช่น "C#m"
 
-3.Help:
-
+3.Help:\
+![play mode picture](https://media.discordapp.net/attachments/836174851625975819/842753470804656179/Help.png)\
     หน้านี้จะช่วยสอนวิธีการใช้งาน
 
-4.Exit:
+4.Exit:\
     ออกจากโปรแกรม
 
 ### ผู้จัดทำ
