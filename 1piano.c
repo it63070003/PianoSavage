@@ -17,7 +17,7 @@ int helpMode(){
     printf("1.Play Mode\n"
            "Type in Note+Octave Time\n"
            "Ex.C#3 500  (note C#, octave 3, time 500ms)\n"
-           "Note: C C# D D# E F F# G G# A A# B\n"
+           "Note: C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B\n"
            "Octave: 3 4 5\n"
            "Time: >= 0 (millisecond)\n"
            "\n\n2.Chords Mode\n"
