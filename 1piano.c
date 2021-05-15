@@ -78,13 +78,13 @@ int playMode(){
                     if(ram[0] == 'C' && !sharp){
                         note = 0;
                     }
-                    else if((ram[0] == 'C' && sharp) || (ram[0] == 'D' && ram[1] == 'b')){
+                    else if((ram[0] == 'C' && ram[1] == '#') || (ram[0] == 'D' && ram[1] == 'b')){
                         note = 1;
                     }
                     else if(ram[0] == 'D' && !sharp){
                         note = 2;
                     }
-                    else if((ram[0] == 'D' && sharp) || (ram[0] == 'E' && ram[1] == 'b')){
+                    else if((ram[0] == 'D' && ram[1] == '#') || (ram[0] == 'E' && ram[1] == 'b')){
                         note = 3;
                     }
                     else if(ram[0] == 'E' && !sharp){
@@ -93,19 +93,19 @@ int playMode(){
                     else if(ram[0] == 'F' && !sharp){
                         note = 5;
                     }
-                    else if((ram[0] == 'F' && sharp) || (ram[0] == 'G' && ram[1] == 'b')){
+                    else if((ram[0] == 'F' && ram[1] == '#') || (ram[0] == 'G' && ram[1] == 'b')){
                         note = 6;
                     }
                     else if(ram[0] == 'G' && !sharp){
                         note = 7;
                     }
-                    else if((ram[0] == 'G' && sharp) || (ram[0] == 'A' && ram[1] == 'b')){
+                    else if((ram[0] == 'G' && ram[1] == '#') || (ram[0] == 'A' && ram[1] == 'b')){
                         note = 8;
                     }
                     else if(ram[0] == 'A' && !sharp){
                         note = 9;
                     }
-                    else if((ram[0] == 'A' && sharp) || (ram[0] == 'B' && ram[1] == 'b')){
+                    else if((ram[0] == 'A' && ram[1] == '#') || (ram[0] == 'B' && ram[1] == 'b')){
                         note = 10;
                     }
                     else if(ram[0] == 'B' && !sharp){
