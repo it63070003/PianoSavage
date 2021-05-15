@@ -74,6 +74,7 @@ int playMode(){
                 }
                 if(state == 0){
                     //note
+                    ram[0] = toupper(ram[0]);
                     if(ram[0] == 'C' && !sharp){
                         note = 0;
                     }
