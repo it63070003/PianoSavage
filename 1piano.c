@@ -116,6 +116,10 @@ int playMode(){
                     else if(ram[0] == '='){
                         return 0;
                     }
+                    else{
+                        printf("Error\n");
+                        return 0;
+                    }
                     //octave
                     ram2[0] = ram[strlen(ram)-1];
                     ram2[1] = '\0';
