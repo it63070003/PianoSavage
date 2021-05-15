@@ -5,6 +5,9 @@
 ## Website
 https://it63070003.github.io/PianoSavage/
 
+## Video
+https://youtu.be/OM0goZ2s5uA
+
 ## สร้างขึ้นด้วย:
 * ภาษาซี
 * cygwin
