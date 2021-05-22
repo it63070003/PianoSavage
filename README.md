@@ -6,7 +6,7 @@
 https://it63070003.github.io/PianoSavage/
 
 ## Video
-https://youtu.be/OM0goZ2s5uA
+https://youtu.be/dLLAN4g2Ats
 
 ## สร้างขึ้นด้วย:
 * ภาษาซี
